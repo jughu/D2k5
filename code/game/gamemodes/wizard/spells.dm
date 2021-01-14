@@ -17,7 +17,7 @@
 
 	var/obj/overlay/B = new /obj/overlay( M.loc )
 	B.icon_state = "blspell"
-	B.icon = 'wizard.dmi'
+	B.icon = 'icons/obj/wizard.dmi'
 	B.name = "spell"
 	B.anchored = 1
 	B.density = 0
@@ -52,7 +52,7 @@
 		spawn(0)
 			var/obj/overlay/A = new /obj/overlay( usr.loc )
 			A.icon_state = "magicm"
-			A.icon = 'wizard.dmi'
+			A.icon = 'icons/obj/wizard.dmi'
 			A.name = "a magic missile"
 			A.anchored = 0
 			A.density = 0
@@ -63,7 +63,7 @@
 					break
 				var/obj/overlay/B = new /obj/overlay( A.loc )
 				B.icon_state = "magicmd"
-				B.icon = 'wizard.dmi'
+				B.icon = 'icons/obj/wizard.dmi'
 				B.name = "trail"
 				B.anchored = 1
 				B.density = 0
@@ -175,7 +175,7 @@
 
 	var/obj/overlay/A = new /obj/overlay( usr.loc )
 	A.icon_state = "fireball"
-	A.icon = 'wizard.dmi'
+	A.icon = 'icons/obj/wizard.dmi'
 	A.name = "a fireball"
 	A.anchored = 0
 	A.density = 0
@@ -256,7 +256,7 @@
 	var/turf/myturf = get_turf(usr)
 
 	var/obj/overlay/pulse = new/obj/overlay ( myturf )
-	pulse.icon = 'effects.dmi'
+	pulse.icon = 'icons/effects/effects.dmi'
 	pulse.icon_state = "emppulse"
 	pulse.name = "emp pulse"
 	pulse.anchored = 1
@@ -354,7 +354,7 @@
 		A.use_power(7500)
 
 		var/obj/overlay/pulse2 = new/obj/overlay ( A.loc )
-		pulse2.icon = 'effects.dmi'
+		pulse2.icon = 'icons/effects/effects.dmi'
 		pulse2.icon_state = "empdisable"
 		pulse2.name = "emp sparks"
 		pulse2.anchored = 1

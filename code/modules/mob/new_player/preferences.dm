@@ -291,7 +291,7 @@ datum/preferences
 		else if (gender == FEMALE)
 			g = "f"
 
-		preview_icon = new /icon('human.dmi', "body_[g]_s")
+		preview_icon = new /icon('icons/mob/human.dmi', "body_[g]_s")
 
 		// Skin tone
 		if (s_tone >= 0)
@@ -300,9 +300,9 @@ datum/preferences
 			preview_icon.Blend(rgb(-s_tone,  -s_tone,  -s_tone), ICON_SUBTRACT)
 
 		if (underwear > 0)
-			preview_icon.Blend(new /icon('human.dmi', "underwear[underwear]_[g]_s"), ICON_OVERLAY)
+			preview_icon.Blend(new /icon('icons/mob/human.dmi', "underwear[underwear]_[g]_s"), ICON_OVERLAY)
 
-		var/icon/eyes_s = new/icon("icon" = 'human_face.dmi', "icon_state" = "eyes_s")
+		var/icon/eyes_s = new/icon("icon" = 'icons/mob/human_face.dmi', "icon_state" = "eyes_s")
 		eyes_s.Blend(rgb(r_eyes, g_eyes, b_eyes), ICON_ADD)
 
 		var/h_style_r = null
@@ -379,13 +379,13 @@ datum/preferences
 			else
 				f_style_r = "bald"
 
-		var/icon/hair_s = new/icon("icon" = 'human_face.dmi', "icon_state" = "[h_style_r]_s")
+		var/icon/hair_s = new/icon("icon" = 'icons/mob/human_face.dmi', "icon_state" = "[h_style_r]_s")
 		hair_s.Blend(rgb(r_hair, g_hair, b_hair), ICON_ADD)
 
-		var/icon/facial_s = new/icon("icon" = 'human_face.dmi', "icon_state" = "[f_style_r]_s")
+		var/icon/facial_s = new/icon("icon" = 'icons/mob/human_face.dmi', "icon_state" = "[f_style_r]_s")
 		facial_s.Blend(rgb(r_facial, g_facial, b_facial), ICON_ADD)
 
-		var/icon/mouth_s = new/icon("icon" = 'human_face.dmi', "icon_state" = "mouth_[g]_s")
+		var/icon/mouth_s = new/icon("icon" = 'icons/mob/human_face.dmi', "icon_state" = "mouth_[g]_s")
 
 		eyes_s.Blend(hair_s, ICON_OVERLAY)
 		eyes_s.Blend(mouth_s, ICON_OVERLAY)
@@ -978,9 +978,9 @@ datum/preferences
 
 		switch (UI)
 			if (UI_OLD)
-				character.UI = 'screen1_old.dmi'
+				character.UI = 'icons/mob/screen1_old.dmi'
 			if (UI_NEW)
-				character.UI = 'screen1.dmi'
+				character.UI = 'icons/mob/screen1.dmi'
 
 		switch(h_style)
 			if("Short Hair")
